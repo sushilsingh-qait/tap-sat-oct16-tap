@@ -31,8 +31,9 @@ public class CartPageActions extends GetPage {
 	}
 
 	public void verifyCart() {
-		// TODO Auto-generated method stub
-		
+		driver.findElement(By.linkText("PROCEED TO CHECKOUT")).click();
+		WebElement element = driver.findElement(By.linkText("PROCEED TO CHECKOUT"));
+		String infomessage = element.getText();
+		Assert.assertEquals("Proceed To Checkout", infomessage);
 	}
-
 }

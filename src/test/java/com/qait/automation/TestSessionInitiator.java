@@ -55,7 +55,8 @@ public class TestSessionInitiator {
 		loginPage = new LoginPageActions(driver);
 		homePage = new HomePageActions(driver);
 		resultPage = new ResultsPageActions(driver);
-		
+		productDetailsPage = new ProductDetailsActions(driver);
+		cartPage = new CartPageActions(driver);
 	}
 
 	/**

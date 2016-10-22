@@ -29,12 +29,7 @@ public class ProductDetailsActions extends GetPage {
 		this.driver = driver;
 	}
 
-	public void AddTheProductToCart() {
-		String url = driver.getCurrentUrl();
-		for(String winHandle : driver.getWindowHandles())
-	    {
-	    	driver.switchTo().window(winHandle);
-	    }
+	public void AddTheProductToCart() throws InterruptedException {
 	    element("add_to_cart").click();
 	}
 }

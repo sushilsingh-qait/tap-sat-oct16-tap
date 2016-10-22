@@ -44,7 +44,14 @@ public class ResultsPageActions extends GetPage {
 
 	public void clickFirstProduct() {
 		driver.findElement(By.xpath("(//img[contains(@class,'product-image')])[1]")).click();
-		
+		String windowURL = driver.getCurrentUrl();
+		System.out.println(windowURL);
+		for(String winHandle : driver.getWindowHandles())
+	    {
+	    	driver.switchTo().window(winHandle);
+	    }
+		String newWindowURL = driver.getCurrentUrl();
+		System.out.println(newWindowURL);
 	}
 
 
